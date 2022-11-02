@@ -1,0 +1,24 @@
+# create ingress object. route incoming requests to service name php-svc    
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: myphp
+  name: my-php-ingress
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/subnets: subnet-0993114a8f350aa10,subnet-04336b239d93e3e56
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
+spec:
+  ingressClassName: alb
+  rules:
+    - http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: my-php-svc
+              port:
+                number: 80

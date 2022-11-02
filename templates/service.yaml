@@ -1,0 +1,15 @@
+# create a service  
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: myphp
+  name: my-php-svc
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  type: NodePort
+  selector:
+    app.kubernetes.io/name: php
