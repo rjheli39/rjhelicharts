@@ -9,6 +9,6 @@ entries:
     name: applications
     type: application
     urls:
-    - https://github.com/rjheli39/rjhelicharts/applications-0.1.1.tgz
+    - https://github.com/rjheli39/rjhelicharts/
     version: 0.1.1
 generated: "2022-11-02T14:26:42.79200945Z"
