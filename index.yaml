@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  applications:
+  - apiVersion: v2
+    appVersion: 1.17.0
+    created: "2022-11-03T06:51:08.146519111Z"
+    description: A Helm chart for Kubernetes
+    digest: bc9a3ea0543f6d570a95e212f58275b9065859cbb17b5e0eabe757395916173d
+    name: applications
+    type: application
+    urls:
+    - https://github.com/rjheli39/rjhelicharts/applications-0.1.1.tgz
+    version: 0.1.1
+generated: "2022-11-03T06:51:08.145238169Z"
